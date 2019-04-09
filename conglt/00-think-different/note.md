@@ -1,6 +1,6 @@
 # Notes for the fine art of small talk
 
-![book](https://github.com/conglethanh/Fresher-VNG/blob/master/book.jpg)
+![book](book.jpg)
 
 # Dẫn nhập
 -   Xuất phát từ vấn đề vụng về và nhút nhát trong giao tiếp
@@ -66,7 +66,7 @@ uyện
 - Nếu bạn lạc lõng giữa đám đông, tốt nhất nên tìm một ai đó có cảm giác đơn độc như bạn và lỗi kéo họ vào cuộc trò chuyện, chủ động giới thiệu bản thân
 
 ## Im lặng là mất lịch sự
-![silent](https://github.com/conglethanh/Fresher-VNG/blob/master/silence-isnt-always-golden.png)
+![silent](silence-isnt-always-golden.png)
 - Im lặng đều có mặt tốt và xấu 
 - Người hoạt bát có cơ hội và mối quan hệ rộng hơn người im lặng
 - Sự e ngại có thể bị hiểu lầm là kiêu ngạo, đó là hai sự khác nhau hoàn toàn nhưng biểu hiện bên ngoài lại giống nhau
@@ -189,29 +189,10 @@ uyện
 - Học cách nhớ tên là một phần tất yếu của cuộc trò chuyện
 
 ## Hãy cẩn thận với những biệt danh
-- Không nên gọi tắt bằng biệt 34.	Sự	trùng	hợp	đáng	nhớ	nhất	mà	bạn	đã	từng	trải	qua	hay	được	biết	đến	?
-35.	Khi	thoải	mái,	bạn	có	thể	nói	chuyện	như	thế	nào	?
-36.	Nhân	vật	hoạt	hình	nào	bạn	muốn	được	phỏng	vấn	nhất	?	Vì	sao	?
-37.	Hãy	kể	với	tôi	về	gia	đình	bạn.
-38.	Mùi	hương	nào	gợi	đến	một	kỉ	niệm	đặc	biệt	?
-39.	Kể	về	người	đáng	sợ	nhất	bạn	từng	gặp.
-40.	Bạn	thích	làm	gì	một	mình	?
-41.	Hãy	kể	về	một	người	bạn	thời	thơ	ấu	chuyên	gây	rắc	rối	cho	bạn.
-42.	Kể	về	quãng	thời	gian	khi	bạn	ăn	hoặc	uống	quá	nhiều.
-43.	Kể	về	ba	tháng	sống	xa	nhà	đầu	tiên	của	bạn.
-44.	Kể	về	quãng	thời	gian	khi	bạn	thất	nghiệp.
-45.	Chia	sẻ	kỷ	niệm	về	một	người	ông/bà	của	bạn.
-46.	Kể	về	khoảnh	khắc	xấu	hổ	nhất	của	bạn.
-47.	 Kể	 cho	 tôi	 nghe	 về	 điều	 mà	 hầu	 hết	 mọi	 người	 thường	 không	 đoán	 về
-bạn.
-48.	Bạn	sẽ	làm	gì	nếu	như	kiệm	được	một	triệu	đô	la	?
-49.	Thời	tiết	như	thế	nào	được	bạn	cho	là	l{	tưởng	nhất	và	tại	sao	?
-50.	Bạn	đã	học	trượt	tuyết/chơi	piano	như	thế	nào	danh nếu như không được sự đồng ý của họ
+- Không nên gọi tắt bằng biệt danh nếu như không được sự đồng ý của họ
 - Gọi người khác bằng tên chứng tỏ bạn quan tâm đến họ và khiến cho họ cảm thấy bản thân đặc biệt
 
 ## Nên cho đi nhiều hơn những gì hi vọng nhận được
 - Giới thiệu lại tên bạn khi gặp lại ai đó là việc nên làm
 - Điều này giúp người khác không bị khó xử nếu lỡ quên tên mình
 - Đừng bao giờ áp đặt ai đó thường xuyên gặp bạn nghĩa là sẽ nhớ tên bạn, nhất là trong bối cảnh khác nhau
-
-# Chương 4 Duy trì cuộc nói chuyện

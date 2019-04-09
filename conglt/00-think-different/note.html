@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>note.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="notes-for-the-fine-art-of-small-talk">Notes for the fine art of small talk</h1>
+<p><img src="book.jpg" alt="book"></p>
+<h1 id="d%E1%BA%ABn-nh%E1%BA%ADp">Dẫn nhập</h1>
+<ul>
+<li>Xuất phát từ vấn đề vụng về và nhút nhát trong giao tiếp</li>
+<li>Mặc cảm, tự ti về ngoại hình → tự tạo một bức tường ngăn cách với mọi người</li>
+<li>Không giao tiếp → không biết cách nói chuyện → sợ giao tiếp</li>
+<li>Làm thế nào để tự tin hơn? Giao tiếp tốt hơn</li>
+<li>Chúng ta thường bị động trong giao tiếp, ngại ngùng khi bắt chuyện</li>
+<li>Giá trị:
+<ul>
+<li>Tạo dựng sự nghiệp kinh doanh
+doanh</li>
+<li>Kết bạn</li>
+<li>Cải thiện kỹ năng giao tiếp</li>
+<li>Hẹn hò</li>
+<li>Kiếm được việc như mong muốn</li>
+</ul>
+</li>
+<li>Kỹ năng đạt được:
+<ul>
+<li>Biết lôi cuốn bất cứ ai vào cuộc trò chuyện</li>
+<li>Cứu vãn cuộc trò chuyện sắp bế tắc</li>
+<li>Chuyển đề tài câu chuyện
+uyện</li>
+<li>Cảm thấy thoải mái trong giao tiếp</li>
+<li>Kết thúc trò chuyện nhã nhặn</li>
+</ul>
+</li>
+</ul>
+<h1 id="ch%C6%B0%C6%A1ng-1-nh%E1%BB%AFng-kh%C3%B3-kh%C4%83n-trong-tr%C3%B2-chuy%E1%BB%87n-l%C3%A0m-quen">Chương 1: Những khó khăn trong trò chuyện làm quen</h1>
+<ul>
+<li>Họ nghĩ rằng họ không có chuyện gì để nói với nhau</li>
+<li>Họ trốn tránh, tỏ ra bận rộn và tự cô lập bản thân để tránh giao tiếp với người khác</li>
+</ul>
+<h2 id="tr%C3%B2-chuy%E1%BB%87n-th%C3%A0nh-c%C3%B4ng">Trò chuyện thành công</h2>
+<ul>
+<li>Trò chuyện đặt nền tảng cho mối quan hệ</li>
+<li>Giỏi trò chuyện tức là khiến người khác cảm thấy gắn kết được tôn trọng và thoải mái</li>
+<li>Giao tiếp giỏi không phải do bẩm sinh, điều cốt lõi là phải luôn học hỏi và luyện tập những kỹ năng đó</li>
+<li>Không nhất thiết phải tìm mọi cách giao tiếp người lạ lẫn quen</li>
+<li>Cách sống, làm việc và liên lạc hiện nay tạo ra khoảng cách trong giao tiếp với mọi người</li>
+<li>Để giao tiếp tốt ta cần tập trung vào 2 mục tiêu
+<ul>
+<li>Mạo hiểm: <em>không nên hy vọng người khác bắt chuyện trước, ta phải chủ động. Ta biết rằng có thể bị từ chối nhưng đó không phải là điều tồi tệ nhất.</em></li>
+<li>Gánh vác tránh nhiệm: <em>phải tạo ra chủ đề để trao đổi, phải nhớ tên mọi người, hạ nhiệt khi căng thẳng và lấp đầy khoảng trống trong trò chuyện</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="l%E1%BB%9Di-n%C3%B3i-ch%E1%BA%B3ng-m%E1%BA%A5t-ti%E1%BB%81n-mua-nh%C6%B0ng-l%E1%BA%A1i-r%E1%BA%A5t-c%C3%B3-gi%C3%A1-tr%E1%BB%8B">Lời nói chẳng mất tiền mua... nhưng lại rất có giá trị</h2>
+<ul>
+<li>
+<p>Xã giao cần thiết cho tạo dựng và phong phú các mối quan hệ, trò chuyện thân mật giúp gần gũi hơn</p>
+</li>
+<li>
+<p>Tiền được dùng bởi 2 lí do sau:</p>
+<ul>
+<li>Để giải quyết một vấn đề hay đáp ứng nhu cầu</li>
+<li>Để có được cảm giác tích cực, vui vẻ</li>
+</ul>
+</li>
+<li>
+<p>Người giao tiếp tốt phải biết gợi cảm xúc tích cực ở người khác</p>
+</li>
+<li>
+<p>Trò chuyện tạo nên sự giao tiếp. Người ta thường sử dụng dịch vụ ở nơi có nhân viên nồng hậu, thân thiện và biết quan tâm</p>
+</li>
+</ul>
+<h2 id="giao-ti%E1%BA%BFp-%C3%ADt-nh%C6%B0ng-v%E1%BA%ABn-%C4%91%E1%BA%A1t-hi%E1%BB%87u-qu%E1%BA%A3">Giao tiếp ít nhưng vẫn đạt hiệu quả</h2>
+<ul>
+<li>Dùng trò chuyện để tạo nhịp trước khi thảo luận căng thẳng → cơ hội tạo dựng quan hệ, đội ngũ kết dính, tăng khả năng thành công</li>
+<li>Giao tiếp con cái, hiểu cảm xúc và tình trạng của con cái</li>
+<li>Chuyện trò không phải vớ vẩn mà là kết nối mọi người</li>
+<li>Đánh giá đúng sức mạnh trò chuyện, nhận ra giá trị của trò chuyện là bước đi đầu tiên trước khi tiếp thu các kỹ năng, chứ không phải biến bạn thành người lẻo mép</li>
+</ul>
+<h1 id="ch%C6%B0%C6%A1ng-2-bi%E1%BA%BFt-v%C6%B0%E1%BB%A3t-qua-l%E1%BB%9Di-m%E1%BA%B9-d%E1%BA%A1y">Chương 2 Biết vượt qua lời mẹ dạy</h1>
+<ul>
+<li>Những bài học đầu đời khi bé làm chúng ta ngần ngại bắt chuyện:
+<ul>
+<li>Im lặng là vàng</li>
+<li>Không nói chuyện với người lạ</li>
+</ul>
+</li>
+<li>Những điều trên chỉ đúng khi còn bé, khi giữ an toàn, khi biết cách cư xử.</li>
+<li>Khi ta lớn, không phải gặp ai cũng gây nguy hiểm, không phải lúc nào cũng im lặng</li>
+</ul>
+<h2 id="trong-ho%C3%A0n-c%E1%BA%A3nh-b%C3%ACnh-th%C6%B0%E1%BB%9Dng-h%C3%A3y-b%E1%BA%AFt-chuy%E1%BB%87n-v%E1%BB%9Bi-ng%C6%B0%E1%BB%9Di-l%E1%BA%A1">Trong hoàn cảnh bình thường, hãy bắt chuyện với người lạ</h2>
+<ul>
+<li>Hãy gạt đi rụt rè, ngại ngùng bởi người lạ có thể mang đến nhịp sống mới cho bạn</li>
+</ul>
+<h2 id="h%C3%A3y-t%E1%BB%B1-gi%E1%BB%9Bi-thi%E1%BB%87u">Hãy tự giới thiệu</h2>
+<ul>
+<li>Nếu bạn lạc lõng giữa đám đông, tốt nhất nên tìm một ai đó có cảm giác đơn độc như bạn và lỗi kéo họ vào cuộc trò chuyện, chủ động giới thiệu bản thân</li>
+</ul>
+<h2 id="im-l%E1%BA%B7ng-l%C3%A0-m%E1%BA%A5t-l%E1%BB%8Bch-s%E1%BB%B1">Im lặng là mất lịch sự</h2>
+<p><img src="silence-isnt-always-golden.png" alt="silent"></p>
+<ul>
+<li>Im lặng đều có mặt tốt và xấu</li>
+<li>Người hoạt bát có cơ hội và mối quan hệ rộng hơn người im lặng</li>
+<li>Sự e ngại có thể bị hiểu lầm là kiêu ngạo, đó là hai sự khác nhau hoàn toàn nhưng biểu hiện bên ngoài lại giống nhau</li>
+</ul>
+<h2 id="%C4%91i%E1%BB%81u-t%E1%BB%91t-%C4%91%E1%BA%B9p-ch%E1%BB%89-%C4%91%E1%BA%BFn-v%E1%BB%9Bi-ng%C6%B0%E1%BB%9Di-bi%E1%BA%BFt-t%C3%ACm-ki%E1%BA%BFm">Điều tốt đẹp chỉ đến với người biết tìm kiếm</h2>
+<ul>
+<li>
+<p>Chờ đợi mất nhiều thời gian</p>
+</li>
+<li>
+<p>Những điều tốt đẹp chỉ đến với người biết chủ động và hành động tạo ra điều tốt đẹp</p>
+<p><em>&quot;Phải biết trèo cây thì mới đến được chỗ có nhiều hoa quả&quot;</em></p>
+</li>
+<li>
+<p>Trèo cây có thể mạo hiểm nhưng bạn sẽ không hái được quả ngon nếu chỉ biết đứng chờ đợi</p>
+</li>
+</ul>
+<h2 id="b%E1%BA%AFt-chuy%E1%BB%87n-tr%C6%B0%E1%BB%9Bc-l%C3%A0-tr%C3%A1ch-nhi%E1%BB%87m-c%E1%BB%A7a-b%E1%BA%A1n">Bắt chuyện trước là trách nhiệm của bạn</h2>
+<h2 id="duy-tr%C3%AC-tr%C3%B2-chuy%E1%BB%87n-v%E1%BA%ABn-l%C3%A0-tr%C3%A1ch-nhi%E1%BB%87m-c%E1%BB%A7a-b%E1%BA%A1n">Duy trì trò chuyện vẫn là trách nhiệm của bạn</h2>
+<ul>
+<li>
+<p>Đừng dựa vào người khác để tiếp tục cuộc trò chuyện</p>
+</li>
+<li>
+<p>Tránh những câu trả lời nhát gừng, cụt lủn</p>
+</li>
+<li>
+<p>Những câu hỏi phá vỡ sự im lặng chủ đề công việc:</p>
+<ol>
+<li>Miêu	tả	một	ngày	làm	việc	điển	hình	của	bạn.</li>
+<li>Sao	bạn	lại	có	ý	tưởng	này	?</li>
+<li>Điều	gì	khiến	bạn	tham	gia	lĩnh	vực	này	?</li>
+<li>Điều	khiến	bạn	hứng	thú	trong	công	việc	tiếp	thị/nghiên	cứu/giảng	dạy	?</li>
+<li>Điều	bạn	yêu	thích	nhất	trong	công	việc	của	mình	là	gì	?</li>
+<li>Điều	khác	biệt	giữa	bạn,	công	ty	của	bạn	với	các	đối	thủ	cạnh	tranh	?</li>
+<li>Tại	sao	công	ty	của	bạn...	?</li>
+<li>Kể	một	vài	thử	thách	trong	công	việc	của	bạn.</li>
+<li>Bạn	dự	đoán	xu	hướng	sắp	tới	trong	lĩnh	vực	của	bạn	là	gì	?</li>
+<li>Cách	hữu	hiệu	nhất	mà	bạn	biết	để	quảng	bá	cho	doanh	nghiệp	của	mình
+là	gì	?</li>
+<li>Kể	lại	kinh	nghiệm	làm	việc	quan	trọng	nhất	mà	bạn	có	được.</li>
+<li>Lời	khuyên	bạn	dành	cho	những	người	mới	bắt	đầu	trong	lĩnh	vực	như
+bạn	là	gì	?</li>
+<li>Bạn	sẽ	làm	gì	khi	biết	chắc	mình	sẽ	không	thất	bại	?</li>
+<li>Những	 thay	 đổi	 đáng	 kể	 mà	 bạn	 chứng	 kiến	 trong	 công	 việc	 kể	 từ	 khi
+bạn	bắt	đầu	là	gì	?</li>
+<li>Hãy	kể	lại	sự	cố	lạ	lùng	nhất	bạn	gặp	phải.</li>
+<li>Công	việc	tốt	nhất	bạn	từng	làm	là	gì	?	Và	công	việc	tệ	nhất	?</li>
+<li>Phần	khó	khăn	nhất	trong	công	việc	của	bạn	là	gì	?</li>
+<li>Internet	có	ảnh	hưởng	như	thế	nào	đến	công	việc	của	bạn	?</li>
+<li>Bạn	có	biết	ai	có	thể	giúp	tôi...	?</li>
+<li>Hãy	nói	về	nền	kinh	tế/bầu	cử/mùa	hè	có	ảnh	hưởng	thế	nào	đến	côngviệc	của	bạn.</li>
+</ol>
+</li>
+<li>
+<p>Những câu hỏi phá vỡ im lặng trong lĩnh vực xã hội:</p>
+<ol>
+<li>Bạn	nghĩ	gì	về	phim	ảnh/nhà	hàng/tiệc	tùng	?</li>
+<li>Hãy	kể	về	kì	ìghỉ	thú	vị	nhất	của	bạn.</li>
+<li>Bạn	thích	làm	gì	vào	những	ngày	mưa	?</li>
+<li>Nếu	 như	 bạn	 được	 tái	 diễn	 lại	 một	 khoảnh	 khắc	 trong	 cuộc	 sốngý	 đó	 là
+khoảnh	khắc	nào	?</li>
+<li>Bạn	muốn	có	thứ	gì	nhất	?	Tại	sao	?</li>
+<li>Hãy	kể	về	người	họ	hàng	bạn	yêu	quý	nhất.</li>
+<li>Hãy	nói	về	thị	trấn	nơi	bạn	lớn	lên	?</li>
+<li>Bạn	muốn	quay	trở	lại	nơi	nào	trong	thời	gian	tới	đây	?</li>
+<li>Kể	cho	tôi	nghe	về	bọn	trẻ	nhà	bạn.</li>
+<li>Bạn	cho	rằng	độ	tuổi	nào	là	hoàn	hảo	nhất	?	Tại	sao	?</li>
+<li>Một	ngày	làm	việc	của	bạn	như	thế	nào	?</li>
+<li>Trong	số	những	nơi	bạn	đã	sống,	hãy	kể	về	nơi	bạn	thích	nhất.</li>
+<li>Kì	nghỉ	nào	bạn	ưa	thích	nhất	?	Bạn	tận	hưởng	những	gì	?</li>
+<li>Những	truyền	thống	nào	của	gia	đình	mà	bạn	đặc	biệt	ưa	thích	?</li>
+<li>Hãy	kể	về	chiếc	ô	tô/xe	máy	đầu	tiên	bạn	mua	?</li>
+<li>Internet	ảnh	hưởng	như	thế	nào	đến	cuộc	sống	của	bạn	?</li>
+<li>Ai	là	thần	tượng	hồi	nhỏ	của	bạn	?	Và	thần	tượng	đó	có	thay	đổi	không	?</li>
+<li>Hãy	kể	về	người	thầy	bạn	nhớ	nhất.</li>
+<li>Hãy	kể	về	một	bộ	phim/một	cuốn	sách	bạn	từng	xem/đọc	hơn	một	lần.</li>
+<li>Nhà	hàng	ưa	thích	của	bạn	là	gì	?	Lí	do	?</li>
+<li>Hãy	kể	tại	sao	bạn	được	đặt	tên	là	...	?	Hãy	kể	nguồn	gốc	họ	của	bạn	?</li>
+<li>Hãy	kể	về	nơi	nào	bạn	đã	đến	và	mong	sẽ	không	bao	giờ	phải	trở	lại.</li>
+<li>Điều	ngạc	nhiên	lớn	nhất	bạn	từng	có	là	gì	?</li>
+<li>Điều	bất	ngờ	lớn	nhất	bạn	từng	lên	kế	hoạch	dành	cho	một	ai	đó	là	gì	?</li>
+<li>Trượt	tuyết	 ở	nơi	 này	luôn	là	 thử	thách.	 Bạn	thích	trượt	 tuyết	ở	 những
+đâu	?</li>
+<li>Ai	sẽ	đóng	vai	bạn	nếu	có	bộ	phim	về	cuộc	đời	bạn	?	Sao	lại	là	người	đó
+?</li>
+<li>Người	nổi	tiếng	nhất	mà	bạn	đã	gặp	là	ai	?</li>
+<li>Hãy	kể	về	một	vài	giải	pháp	cho	cuộc	sống	và	công	việc	trong	năm	mới
+của	bạn.</li>
+<li>Việc	thiếu	tổ	chức	nhất	mà	bạn	đã	từng	làm	là	gì	?</li>
+<li>Kể	về	một	bộ	trang	phục	bạn	đã	mặc	đi	dự	tiệc.</li>
+<li>Kể	về	địa	vị	chính	trị	mà	bạn	muốn	nắm	giữ.</li>
+<li>Bài	hát	nào	gợi	nhớ	một	sự	cố	trong	cuộc	đời	bạn	?</li>
+<li>Bữa	ăn	đáng	nhớ	nhất	của	bạn	là	ở	đâu	?</li>
+<li>Sự	trùng	hợp	đáng	nhớ	nhất	mà	bạn	đã	từng	trải	qua	hay	được	biết	đến	?</li>
+<li>Khi	thoải	mái,	bạn	có	thể	nói	chuyện	như	thế	nào	?</li>
+<li>Nhân	vật	hoạt	hình	nào	bạn	muốn	được	phỏng	vấn	nhất	?	Vì	sao	?</li>
+<li>Hãy	kể	với	tôi	về	gia	đình	bạn.</li>
+<li>Mùi	hương	nào	gợi	đến	một	kỉ	niệm	đặc	biệt	?</li>
+<li>Kể	về	người	đáng	sợ	nhất	bạn	từng	gặp.</li>
+<li>Bạn	thích	làm	gì	một	mình	?</li>
+<li>Hãy	kể	về	một	người	bạn	thời	thơ	ấu	chuyên	gây	rắc	rối	cho	bạn.</li>
+<li>Kể	về	quãng	thời	gian	khi	bạn	ăn	hoặc	uống	quá	nhiều.</li>
+<li>Kể	về	ba	tháng	sống	xa	nhà	đầu	tiên	của	bạn.</li>
+<li>Kể	về	quãng	thời	gian	khi	bạn	thất	nghiệp.</li>
+<li>Chia	sẻ	kỷ	niệm	về	một	người	ông/bà	của	bạn.</li>
+<li>Kể	về	khoảnh	khắc	xấu	hổ	nhất	của	bạn.</li>
+<li>Kể	 cho	 tôi	 nghe	 về	 điều	 mà	 hầu	 hết	 mọi	 người	 thường	 không	 đoán	 về
+bạn.</li>
+<li>Bạn	sẽ	làm	gì	nếu	như	kiệm	được	một	triệu	đô	la	?</li>
+<li>Thời	tiết	như	thế	nào	được	bạn	cho	là	lí	tưởng	nhất	và	tại	sao	?</li>
+<li>Bạn	đã	học	trượt	tuyết/chơi	piano	như	thế	nào</li>
+</ol>
+</li>
+</ul>
+<h1 id="ch%C6%B0%C6%A1ng-3-tr%C3%B2-ch%C6%A1i-m%E1%BA%A1o-hi%E1%BB%83m-b%E1%BA%AFt-chuy%E1%BB%87n">Chương 3 Trò chơi mạo hiểm: Bắt chuyện</h1>
+
+</body>
+</html>
