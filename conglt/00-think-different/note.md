@@ -1,6 +1,6 @@
 # Notes for the fine art of small talk
 
-![book](book.jpg)
+![book](https://github.com/conglethanh/Fresher-VNG/blob/master/book.jpg)
 
 # Dẫn nhập
 -   Xuất phát từ vấn đề vụng về và nhút nhát trong giao tiếp
