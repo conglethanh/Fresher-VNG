@@ -66,7 +66,7 @@ uyện
 - Nếu bạn lạc lõng giữa đám đông, tốt nhất nên tìm một ai đó có cảm giác đơn độc như bạn và lỗi kéo họ vào cuộc trò chuyện, chủ động giới thiệu bản thân
 
 ## Im lặng là mất lịch sự
-![silent](silence-isnt-always-golden.png)
+![silent](https://github.com/conglethanh/Fresher-VNG/blob/master/silence-isnt-always-golden.png)
 - Im lặng đều có mặt tốt và xấu 
 - Người hoạt bát có cơ hội và mối quan hệ rộng hơn người im lặng
 - Sự e ngại có thể bị hiểu lầm là kiêu ngạo, đó là hai sự khác nhau hoàn toàn nhưng biểu hiện bên ngoài lại giống nhau
