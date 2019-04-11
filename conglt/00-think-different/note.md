@@ -499,5 +499,5 @@ Ngoài những câu phá tan sự im lặng, còn có 4 loại câu hỏi có t�
 # Chương 12 Tận dụng tối đa mọi sự kiện kết giao
 # Chương 13 Tồn tại ở những bữa tiệc độc thân
 # Chương 14 Những nhân tố gây thiện cảm
-# Chương 15
-# Chương 16
+# Chương 15 Tồn tại ở những buổi tiệc nghỉ phép
+# Chương 16 Rèn luyện và tận hưởng thành quả
